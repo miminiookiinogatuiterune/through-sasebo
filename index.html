@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>近くの地図 — 山本千尋</title>
+<title>近くの物語 — 山本千尋</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
@@ -118,13 +118,27 @@ header { padding: 52px 24px 4px; flex-shrink: 0; }
   font-family: 'Hiragino Mincho Pro', serif;
   font-size: 13px; letter-spacing: 0.12em;
 }
+.cta-btn.outline {
+  background: none; color: #1a1714;
+  border: 1px solid #1a1714; margin-left: 10px;
+}
+.header-row { display: flex; align-items: flex-end; justify-content: space-between; }
+.instagram-link {
+  display: flex; align-items: center; gap: 5px;
+  text-decoration: none; color: #aaa;
+  font-size: 11px; letter-spacing: 0.1em;
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.instagram-link:active { color: #c13584; }
+.instagram-link svg { width: 16px; height: 16px; }
 </style>
 </head>
 <body>
 
 <div id="screen-title">
   <div class="title-eyebrow">Chihiro Yamamoto</div>
-  <div class="title-main">近くの<br>地図</div>
+  <div class="title-main">近くの<br>物語</div>
   <div class="title-sub">長崎、佐世保、離島——<br>当たり前の風景を、<br>記録として残したい。</div>
   <div class="title-author">山本千尋 ライター・長崎県佐世保市</div>
   <button class="start-btn" onclick="startMain()"><span>記事をひらく</span><span>→</span></button>
@@ -133,8 +147,20 @@ header { padding: 52px 24px 4px; flex-shrink: 0; }
 
 <div id="screen-main">
   <header>
-    <div class="site-name">近くの地図</div>
-    <div class="site-en">Chihiro Yamamoto — Writer, Sasebo</div>
+    <div class="header-row">
+      <div>
+        <div class="site-name">近くの物語</div>
+        <div class="site-en">Chihiro Yamamoto — Writer, Sasebo</div>
+      </div>
+      <a class="instagram-link" href="https://www.instagram.com/yamamotochihiro_kaku/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+    </div>
   </header>
 
   <div id="geo-banner"></div>
@@ -282,7 +308,7 @@ const articles = {
     { source:'note', date:'2026/03', lat:32.895, lng:129.862,
       title:'それは見事なU字型を描いて — 牛右衛門をぜんぶめぐりたい vol.6・7 諫早店→新戸町店ハシゴ編',
       desc:'長崎のローカルチェーン牛右衛門。勝手に連載中。',
-      href:'https://note.com/chihiro_kaku/n/nc845cd4c3708' },
+      href:'https://note.com/chihiro_kaku/n/n8e701527b683' },
     { source:'note', date:'2025/10', lat:32.734, lng:129.893,
       title:'【勝手に連載はじめます】牛右衛門をぜんぶめぐりたい vol.1 大塔店編',
       desc:'長崎のローカルチェーン牛右衛門。県民ならきっと幼い頃から親しんできた老舗のひとつ。',
@@ -319,20 +345,6 @@ const articles = {
       title:'思い入れのある曲で8cm短冊シングルを作ったら愛しかなかった',
       desc:'かつて大好きな曲を買った思い出のある8cm短冊シングル。今また作ることはできないか。',
       href:'https://dailyportalz.jp/kiji/love-8cm_single_CD' },
-    { source:'note', date:'2025/11', lat:32.744, lng:129.877,
-  title:'地下にある秘密基地レストラン〜長崎のローカルチェーン『牛右衛門』をぜんぶめぐりたい vol.3 浜町店編〜',
-  desc:'長崎のローカルチェーン牛右衛門。地下に広がる独特な店舗空間が魅力の浜町店。',
-  href:'https://note.com/chihiro_kaku/n/nec9cdb8aebe1' },
-
-{ source:'note', date:'2025/12', lat:32.783, lng:129.915,
-  title:'団地をのぞむ天空のギャラリー〜長崎のローカルチェーン『牛右衛門』をぜんぶめぐりたい vol.4 東長崎店編〜',
-  desc:'高台に位置し、団地を見渡すロケーションが印象的な東長崎店。',
-  href:'https://note.com/chihiro_kaku/n/nd9227b1becb4' },
-
-{ source:'note', date:'2026/01', lat:33.340, lng:129.686,
-  title:'アジフライランチ難民のオアシス〜長崎のローカルチェーン『牛右衛門』をぜんぶめぐりたい vol.5 松浦店編',
-  desc:'長崎のローカルチェーン牛右衛門。松浦エリアで貴重なランチ拠点として機能する店舗。',
-  href:'https://note.com/chihiro_kaku/n/n53cf45612f83' },
   ],
 };
 
@@ -407,6 +419,7 @@ function renderWork() {
         『佐世保の自由研究 第2弾』（2023年10月）
       </div>
       <div class="work-note">編集・発行：山本千尋　校正・デザイン：山本陽司<br><br>📚 佐世保市内の各書店にてお取り扱いしています</div>
+      <a href="https://yamamoto-857.stores.jp/" target="_blank" rel="noopener" class="cta-btn">オンラインで購入する ↗</a>
     </div>
     <div class="work-section">
       <div class="work-section-title">掲載媒体</div>
