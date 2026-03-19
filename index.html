@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>近くの地図 — 山本千尋</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23f5f0e8'/><circle cx='16' cy='13' r='5' fill='none' stroke='%23b5432a' stroke-width='2.2'/><circle cx='16' cy='13' r='2' fill='%23b5432a'/><line x1='16' y1='18' x2='16' y2='24' stroke='%23b5432a' stroke-width='2.2' stroke-linecap='round'/></svg>">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACyklEQVR42u3dMW7jQBBE0TmPr+Ez+04bOmHuzMFio4VEdlU/4Ocim08SbM2Q5/r+I/2zYwSCQ3AIDsEhOASH4BAcgkNwSHAIDsEhOASH4BAcgkNwCA4JDsEhOASH4BAcD/X1+fF/wQEEKDtwvNzEKiUHC0QW4biZRTGRgwUi5TiGsCgjcsjgoxPHWBYdRA4ZfLThCJKR6+OQwUcJjlAWoUQOGX9dOT7g+Eh5aThuujxlRwLHa67HhkPaiGPyNej2cYplOEg4RgwdDjJ2+ThlMhw2HKNHDIf59vsoweEUtuDoeNsVnMXxnnMiMTjK/skYfTrZOPp+GIJjy8dG+kmd5W+ygb/yw/H8EFtfqxPHbRN85EeQRB/rcDy1AgOOm3CErvCDYy6Ox1cIwzH0U3fC9oK4bxY44CjCMWc3VP03CxxwLMYxamMjHHDAAQcccMABBxzhOOb8qfLu44HDJwcccMABBxxwwAEHHH5b8dsKHHBYz2E9BxxwWENqDSkcVp/DYd8KHHa8wWGvrL2ydtnbZe9WFk5qNo7LnX0mHbl7gjmdHByXuwnC8do/NZ3FFhyXOxjDUfy2c+9z822WcXneisOOxHF5UhMcHRP3jLckHJ4O2Y/j8lxZON69gmvDIS3FcXmWPRx3riBPeWk4nt/Y+HvZ7nkVOCJ9kJGKI5pI3JwjcST6SBxyKo4sH6ETDsaR4iN3vNk4hhNJH2wDjpk+CqZagmMUkZp5VuF4nEjZJAtxPEKkcoa1OO78j3tr5Tjep2TD0LbgqF/SB8etXIwFDjjggAMOOOCAAw444IADDjjggAMOOOCAAw444IADDjjggAMOOOCAAw444IADDjjggAMOOOCAAw7BITgEh+AQHIJDcAgOwSHBITgEh+AQHIJDcAgOwSE4BIcEh+AQHIJDcAgOwSE4BIfgkOAQHIJDcAgOwSE4BIfg0KJ+AIDbJb7kmCDbAAAAAElFTkSuQmCC">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
@@ -123,6 +124,16 @@ header { padding: 52px 24px 4px; flex-shrink: 0; }
   background: none; color: #1a1714;
   border: 1px solid #1a1714; margin-left: 10px;
 }
+.media-list { display: flex; flex-direction: column; gap: 0; }
+.media-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0; border-bottom: 1px solid #e8e2d8;
+  text-decoration: none; color: inherit;
+}
+.media-item:last-child { border-bottom: none; }
+.media-name { font-size: 13px; letter-spacing: 0.05em; color: #1a1714; }
+.media-count { font-size: 10px; color: #b5432a; letter-spacing: 0.08em; margin-top: 3px; }
+.media-arrow { font-size: 13px; color: #ccc; }
 .header-row { display: flex; align-items: flex-end; justify-content: space-between; }
 .instagram-link {
   display: flex; align-items: center; gap: 5px;
@@ -347,6 +358,62 @@ const articles = {
       desc:'かつて大好きな曲を買った思い出のある8cm短冊シングル。今また作ることはできないか。',
       href:'https://dailyportalz.jp/kiji/love-8cm_single_CD' },
   ],
+  kujiranohige: [
+    { source:'くじらの髭', date:'2023/12', lat:33.375, lng:129.907,
+      title:'"ハマる"を原動力に、行動と思考を積み重ねながら確かな歩みを続ける。『松尾農園 代表 松尾秀平さん』',
+      desc:'東彼杵の農家・松尾秀平さんのポートレート取材。',
+      href:'https://kujiranohige.com/person/22255/' },
+    { source:'くじらの髭', date:'2023/12', lat:33.375, lng:129.907,
+      title:'大好きなまちだから、恩返しをしたい。『Kujaku Peace代表　前平泉さん』',
+      desc:'東彼杵を拠点に活動する前平泉さんへのインタビュー。',
+      href:'https://kujiranohige.com/person/22144/' },
+    { source:'くじらの髭', date:'2021/10', lat:33.375, lng:129.907,
+      title:'田舎をチャンスに！ 世界中に生の香りを届けたい【YAMABE KAJUEN/山辺果樹園代表・山辺吉伸さん】',
+      desc:'東彼杵の果樹園で、世界に香りを届ける挑戦をする山辺さんのお話。',
+      href:'https://kujiranohige.com/person/3134/' },
+    { source:'くじらの髭', date:'2021/08', lat:33.375, lng:129.907,
+      title:'いちご農家の妻、もうひとつの顔はライターです。【樋口英里さん】',
+      desc:'農家の傍らライターとして活躍する樋口英里さんへのインタビュー。',
+      href:'https://kujiranohige.com/person/2948/' },
+  ],
+  toyokeizai: [
+    { source:'東洋経済オンライン', date:'2025/10', lat:32.750, lng:129.880,
+      title:'長崎でちゃんぽん「リンガーハット」逆に推奨なワケ',
+      desc:'出張先で立ち寄りたいチェーン店シリーズ。地元・長崎から見たリンガーハットの魅力を語る。',
+      href:'https://toyokeizai.net/articles/-/905736' },
+    { source:'東洋経済オンライン', date:'2025/08', lat:33.080, lng:129.460,
+      title:'地方の崖っぷち遊園地「自虐」に潜む生存戦略',
+      desc:'ネット検索で「怖い」「ホラー」と出てくる遊園地の戦略に迫った。',
+      href:'https://toyokeizai.net/articles/-/895522' },
+  ],
+  tap: [
+    { source:'TAP99', date:'2024/01', lat:33.168, lng:129.718,
+      title:'佐世保・広田の「Sputnik（スプートニク）」ってどんなお店？リョージさんに聞いてみた【前編】',
+      desc:'佐世保・広田エリアで営むSputnikのマスター・リョージさんへのインタビュー前半。',
+      href:'https://www.talk-about-pop.com/post/20240115_sputnik' },
+    { source:'TAP99', date:'2024/03', lat:33.168, lng:129.718,
+      title:'LASTのリョージさんって何者？名店のバイブスを受け継ぐ変わらない佐世保の"灯り"',
+      desc:'佐世保のカフェ・音楽シーンを牽引してきたcafe & bar LASTのリョージさん深掘りインタビュー後半。',
+      href:'https://www.talk-about-pop.com/post/20240327_ryoji' },
+    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.712,
+      title:'図書館には公式キャラクターがいる',
+      desc:'佐世保市立図書館の公式キャラクターにまつわるレポート。',
+      href:'https://www.talk-about-pop.com/post/20240620toshokan' },
+    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.714,
+      title:'フォトスタジオ森白汀の、親子３代でシャッターを切り続けた85年の歴史と、いまに繋がる節目の物語【前編】',
+      desc:'佐世保の老舗写真スタジオ「森白汀」三代目による85年の歴史と転機の物語。',
+      href:'https://www.talk-about-pop.com/post/2024morihakutei01' },
+    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.714,
+      title:'フォトスタジオ森白汀の、親子３代でシャッターを切り続けた85年の歴史と、いまに繋がる節目の物語【後編】',
+      desc:'割烹、洋食、米海軍のレストラン……国境を越えた食の修行が生んだ一皿の物語。後編。',
+      href:'https://www.talk-about-pop.com/post/2024morihakutei02' },
+  ],
+  mesitsu: [
+    { source:'メシ通', date:'2020/02', lat:33.162, lng:129.712,
+      title:'子どもの頃大好きだった「デパートの食堂」は今どうなっているのか【憧れのお子さまランチ】',
+      desc:'昭和生まれには懐かしい、デパートのレストランと洋食の風景。佐世保玉屋の食堂を訪ねた。',
+      href:'https://www.hotpepper.jp/mesitsu/entry/chihiro-yamamoto/2019-00166' },
+  ],
 };
 
 function calcDist(lat1, lng1, lat2, lng2) {
@@ -424,9 +491,43 @@ function renderWork() {
     </div>
     <div class="work-section">
       <div class="work-section-title">掲載媒体</div>
-      <div class="work-section-body">
-        デイリーポータルZ / SPOT<br>
-        ハイキーパーソン / 蜜柑と蜜蜂 ほか
+      <div class="media-list">
+        <a class="media-item" href="https://dailyportalz.jp/writer/kijilist/2296" target="_blank" rel="noopener">
+          <div><div class="media-name">デイリーポータルZ</div><div class="media-count">23件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://saikai338.com/" target="_blank" rel="noopener">
+          <div><div class="media-name">蜜柑と蜜蜂</div><div class="media-count">7件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://www.talk-about-pop.com/" target="_blank" rel="noopener">
+          <div><div class="media-name">TAP99</div><div class="media-count">5件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://hi-key-person.com/" target="_blank" rel="noopener">
+          <div><div class="media-name">ハイキーパーソン</div><div class="media-count">4件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://kujiranohige.com/member/3816/" target="_blank" rel="noopener">
+          <div><div class="media-name">くじらの髭</div><div class="media-count">4件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://toyokeizai.net/list/author/%E5%B1%B1%E6%9C%AC+%E5%8D%83%E5%B0%8B" target="_blank" rel="noopener">
+          <div><div class="media-name">東洋経済オンライン</div><div class="media-count">2件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://travel.spot-app.jp/author/yamamoto_chihiro/" target="_blank" rel="noopener">
+          <div><div class="media-name">SPOT</div><div class="media-count">1件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://stlocal.net/nagasaki" target="_blank" rel="noopener">
+          <div><div class="media-name">STOLOCAL</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://www.hotpepper.jp/mesitsu/" target="_blank" rel="noopener">
+          <div><div class="media-name">メシ通</div><div class="media-count">1件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
       </div>
     </div>
   `;
