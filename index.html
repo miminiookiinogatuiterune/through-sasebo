@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>近くの地図 — 山本千尋</title>
+<meta property="og:title" content="近くの地図 — 山本千尋">
+<meta property="og:description" content="長崎、佐世保、離島——当たり前の風景を、記録として残したい。フリーライター・山本千尋の記事まとめ。">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23f5f0e8'/><circle cx='16' cy='13' r='5' fill='none' stroke='%23b5432a' stroke-width='2.2'/><circle cx='16' cy='13' r='2' fill='%23b5432a'/><line x1='16' y1='18' x2='16' y2='24' stroke='%23b5432a' stroke-width='2.2' stroke-linecap='round'/></svg>">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACyklEQVR42u3dMW7jQBBE0TmPr+Ez+04bOmHuzMFio4VEdlU/4Ocim08SbM2Q5/r+I/2zYwSCQ3AIDsEhOASH4BAcgkNwSHAIDsEhOASH4BAcgkNwCA4JDsEhOASH4BAcD/X1+fF/wQEEKDtwvNzEKiUHC0QW4biZRTGRgwUi5TiGsCgjcsjgoxPHWBYdRA4ZfLThCJKR6+OQwUcJjlAWoUQOGX9dOT7g+Eh5aThuujxlRwLHa67HhkPaiGPyNej2cYplOEg4RgwdDjJ2+ThlMhw2HKNHDIf59vsoweEUtuDoeNsVnMXxnnMiMTjK/skYfTrZOPp+GIJjy8dG+kmd5W+ygb/yw/H8EFtfqxPHbRN85EeQRB/rcDy1AgOOm3CErvCDYy6Ox1cIwzH0U3fC9oK4bxY44CjCMWc3VP03CxxwLMYxamMjHHDAAQcccMABBxzhOOb8qfLu44HDJwcccMABBxxwwAEHHH5b8dsKHHBYz2E9BxxwWENqDSkcVp/DYd8KHHa8wWGvrL2ydtnbZe9WFk5qNo7LnX0mHbl7gjmdHByXuwnC8do/NZ3FFhyXOxjDUfy2c+9z822WcXneisOOxHF5UhMcHRP3jLckHJ4O2Y/j8lxZON69gmvDIS3FcXmWPRx3riBPeWk4nt/Y+HvZ7nkVOCJ9kJGKI5pI3JwjcST6SBxyKo4sH6ETDsaR4iN3vNk4hhNJH2wDjpk+CqZagmMUkZp5VuF4nEjZJAtxPEKkcoa1OO78j3tr5Tjep2TD0LbgqF/SB8etXIwFDjjggAMOOOCAAw444IADDjjggAMOOOCAAw444IADDjjggAMOOOCAAw444IADDjjggAMOOOCAAw7BITgEh+AQHIJDcAgOwSHBITgEh+AQHIJDcAgOwSE4BIcEh+AQHIJDcAgOwSE4BIfgkOAQHIJDcAgOwSE4BIfg0KJ+AIDbJb7kmCDbAAAAAElFTkSuQmCC">
 <style>
@@ -416,6 +419,14 @@ const articles = {
   ],
 };
 
+// タブパネルとarticlesキーの対応表
+const tabMap = {
+  nagasaki:  ['nagasaki', 'toyokeizai', 'mesitsu', 'tap'],
+  interview: ['interview', 'kujiranohige'],
+  island:    ['island'],
+  daily:     ['daily'],
+};
+
 function calcDist(lat1, lng1, lat2, lng2) {
   const R = 6371;
   const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -449,8 +460,9 @@ function makeCard(a, dist) {
 let userLat = null, userLng = null;
 
 function renderAll() {
-  for (const [genre, list] of Object.entries(articles)) {
-    document.getElementById('panel-'+genre).innerHTML = list.map(a => makeCard(a, null)).join('');
+  for (const [panel, keys] of Object.entries(tabMap)) {
+    const list = keys.flatMap(k => articles[k] || []);
+    document.getElementById('panel-'+panel).innerHTML = list.map(a => makeCard(a, null)).join('');
   }
   renderWork();
   renderNear();
@@ -492,7 +504,7 @@ function renderWork() {
     <div class="work-section">
       <div class="work-section-title">掲載媒体</div>
       <div class="media-list">
-        <a class="media-item" href="https://dailyportalz.jp/writer/kijilist/2296" target="_blank" rel="noopener">
+        <a class="media-item" href="https://dailyportalz.jp/" target="_blank" rel="noopener">
           <div><div class="media-name">デイリーポータルZ</div><div class="media-count">23件</div></div>
           <span class="media-arrow">↗</span>
         </a>
@@ -508,24 +520,24 @@ function renderWork() {
           <div><div class="media-name">ハイキーパーソン</div><div class="media-count">4件</div></div>
           <span class="media-arrow">↗</span>
         </a>
-        <a class="media-item" href="https://kujiranohige.com/member/3816/" target="_blank" rel="noopener">
+        <a class="media-item" href="https://kujiranohige.com/" target="_blank" rel="noopener">
           <div><div class="media-name">くじらの髭</div><div class="media-count">4件</div></div>
           <span class="media-arrow">↗</span>
         </a>
-        <a class="media-item" href="https://toyokeizai.net/list/author/%E5%B1%B1%E6%9C%AC+%E5%8D%83%E5%B0%8B" target="_blank" rel="noopener">
+        <a class="media-item" href="https://toyokeizai.net/" target="_blank" rel="noopener">
           <div><div class="media-name">東洋経済オンライン</div><div class="media-count">2件</div></div>
           <span class="media-arrow">↗</span>
         </a>
-        <a class="media-item" href="https://travel.spot-app.jp/author/yamamoto_chihiro/" target="_blank" rel="noopener">
+        <a class="media-item" href="https://travel.spot-app.jp/" target="_blank" rel="noopener">
           <div><div class="media-name">SPOT</div><div class="media-count">1件</div></div>
-          <span class="media-arrow">↗</span>
-        </a>
-        <a class="media-item" href="https://stlocal.net/nagasaki" target="_blank" rel="noopener">
-          <div><div class="media-name">STOLOCAL</div></div>
           <span class="media-arrow">↗</span>
         </a>
         <a class="media-item" href="https://www.hotpepper.jp/mesitsu/" target="_blank" rel="noopener">
           <div><div class="media-name">メシ通</div><div class="media-count">1件</div></div>
+          <span class="media-arrow">↗</span>
+        </a>
+        <a class="media-item" href="https://stlocal.net/nagasaki" target="_blank" rel="noopener">
+          <div><div class="media-name">STOLOCAL</div></div>
           <span class="media-arrow">↗</span>
         </a>
       </div>
