@@ -161,7 +161,7 @@ header { padding: 52px 24px 4px; flex-shrink: 0; }
 <div id="screen-title">
   <div class="title-eyebrow">Chihiro Yamamoto</div>
   <div class="title-main">近くの<br>地図</div>
-  <div class="title-sub">長崎、佐世保、離島——<br>当たり前の風景を、<br>記録として残したい。</div>
+  <div class="title-sub">日本最西端・地元の長崎県佐世保市から<br>半径50kmの気になりごとを<br>記録していきます。</div>
   <div class="title-author">山本千尋 ライター・長崎県佐世保市</div>
   <button class="start-btn" onclick="startMain()"><span>記事をひらく</span><span>→</span></button>
   <div class="geo-note">※ 現在地から近い記事を先に表示します<br>位置情報は外部に送信されません</div>
@@ -332,7 +332,11 @@ const articles = {
     { source:'デイリーポータルZ', date:'2023/09', lat:33.248, lng:129.653,
       title:'佐世保の重要文化財、針尾無線塔がフェス会場みたいになって興奮した日',
       desc:'コンクリート造で高さ136mの超巨大電波塔「針尾無線塔」。基礎部分が公開された。',
-      href:'https://dailyportalz.jp/kiji/hario_musento-ga-fes', book:1 },
+      href:'https://dailyportalz.jp/kiji/hario_musento-ga-fes' },
+    { source:'デイリーポータルZ', date:'2020/03', lat:33.248, lng:129.653,
+      title:'前略、地上136ｍの塔の上より～針尾無線塔とともに暮らす男たち',
+      desc:'旧海軍が作った高さ136mの電波塔。その傍らでふつうに暮らしている人たちがいる。',
+      href:'https://dailyportalz.jp/kiji/from_hario-musentou', book:1 },
     { source:'デイリーポータルZ', date:'2022/03', lat:32.680, lng:128.840,
       title:'長崎県五島列島の郷土菓子「かんころもち」のうまさと歴史を一緒に噛みしめてみませんか',
       desc:'サツマイモを使った長崎県五島列島の郷土菓子。味わいも誕生した時代背景も深い。',
@@ -355,7 +359,7 @@ const articles = {
       title:'それは見事なU字型を描いて — 牛右衛門をぜんぶめぐりたい vol.6・7 諫早店→新戸町店ハシゴ編',
       desc:'長崎のローカルチェーン牛右衛門。勝手に連載中。',
       href:'https://note.com/chihiro_kaku/n/n8e701527b683' },
-    { source:'note', date:'2025/10', lat:32.734, lng:129.893,
+    { source:'note', date:'2025/10', lat:33.155027, lng:129.772431,
       title:'【勝手に連載はじめます】牛右衛門をぜんぶめぐりたい vol.1 大塔店編',
       desc:'長崎のローカルチェーン牛右衛門。県民ならきっと幼い頃から親しんできた老舗のひとつ。',
       href:'https://note.com/chihiro_kaku/n/n8e701527b683' },
@@ -496,9 +500,17 @@ function makeCard(a, dist) {
 
 let userLat = null, userLng = null;
 
+function sortByDate(list) {
+  return [...list].sort((a, b) => {
+    const da = a.date ? a.date.replace('/', '-') : '';
+    const db = b.date ? b.date.replace('/', '-') : '';
+    return db.localeCompare(da);
+  });
+}
+
 function renderAll() {
   for (const [panel, keys] of Object.entries(tabMap)) {
-    const list = keys.flatMap(k => articles[k] || []);
+    const list = sortByDate(keys.flatMap(k => articles[k] || []));
     document.getElementById('panel-'+panel).innerHTML = list.map(a => makeCard(a, null)).join('');
   }
   renderWork();
