@@ -209,254 +209,161 @@ header { padding: 52px 24px 4px; flex-shrink: 0; }
 <script>
 const articles = {
   nagasaki: [
-    { source:'デイリーポータルZ', date:'2023/12', lat:33.157, lng:129.716,
+    { source:'デイリーポータルZ', date:'2023/12', lat:33.15722, lng:129.71611,
       title:'長崎県のブランド養殖サバ「長崎ハーブ鯖」がホントごめんけど美味い',
       desc:'', href:'https://dailyportalz.jp/kiji/Nagasaki_herb_saba' },
-    { source:'デイリーポータルZ', date:'2023/06', lat:33.180, lng:129.715,
+    { source:'デイリーポータルZ', date:'2023/06', lat:33.18012, lng:129.71534,
       title:'長崎県佐世保市の老舗「白十字パーラー」の2階レストランが70年の歴史に幕',
       desc:'老舗パーラーが閉店に。貴重な写真とともにパーラーのこれまでを聞くことができた。',
       href:'https://dailyportalz.jp/kiji/arigato-hakujuji_parlor', book:2 },
-    { source:'デイリーポータルZ', date:'2023/04', lat:33.162, lng:129.712,
+    { source:'デイリーポータルZ', date:'2023/04', lat:33.16245, lng:129.71212,
       title:'5000円あれば、老舗百貨店「佐世保玉屋」で長崎観光＆時空の旅ができる',
       desc:'幼い頃から"特別なおでかけ"の場所であった「佐世保玉屋」で好きなものを買って食べる体験。',
       href:'https://dailyportalz.jp/kiji/5000yen-ageru-kara-sasebo-tamaya' },
-    { source:'デイリーポータルZ', date:'2023/01', lat:33.164, lng:129.714,
+    { source:'デイリーポータルZ', date:'2023/01', lat:33.16434, lng:129.71421,
       title:'バーガーは逆さに持ってネ！佐世保の老舗ハンバーガー店「ブルースカイ」',
       desc:'佐世保バーガーの草分け的存在として知られるブルースカイ。',
       href:'https://dailyportalz.jp/kiji/nagasaki-sasebo-blue_sky', book:1 },
-    { source:'デイリーポータルZ', date:'2023/01', lat:32.744, lng:129.877,
+    { source:'デイリーポータルZ', date:'2023/01', lat:32.74482, lng:129.87781,
       title:'気になる長崎の郷土料理、その名は「ハトシ」',
       desc:'長崎県のご当地グルメ。知らないがあふれてる名前に近寄るには心の準備が要る。',
       href:'https://dailyportalz.jp/kiji/nagasaki-hatoshi' },
-    { source:'デイリーポータルZ', date:'2022/04', lat:33.228, lng:129.696,
+    { source:'デイリーポータルZ', date:'2022/04', lat:33.22851, lng:129.69675,
       title:'和食器を日常使いしてみたら食への慈しみの心が芽生えた',
       desc:'三川内焼の老舗・尾崎陶器さんのご協力で、やんごとなきうつわにコンビニグルメを盛り付けてもらった。',
       href:'https://dailyportalz.jp/kiji/washokki-wo-nichijo-ni', book:1 },
-    { source:'デイリーポータルZ', date:'2023/03', lat:32.750, lng:129.880,
+    { source:'デイリーポータルZ', date:'2023/03', lat:32.75012, lng:129.88015,
       title:'長崎県には独自のストローで巻いたかまぼこがある【すぼ】',
       desc:'', href:'https://dailyportalz.jp/kiji/nagasaki-subo' },
-    { source:'デイリーポータルZ', date:'2023/03', lat:33.168, lng:129.718,
+    { source:'デイリーポータルZ', date:'2023/03', lat:33.16856, lng:129.71867,
       title:'婚活、進学、仕事……人生の悩みを駄菓子のプロに解決してもらおう【長崎・吉田玩具店】',
       desc:'お祭りや行事用に駄菓子の袋詰めをする専門のお店。社長さんに悩みを解決してもらった。',
       href:'https://dailyportalz.jp/kiji/dagashi-de-nayami-kaiketsu', book:2 },
-    { source:'デイリーポータルZ', date:'2021/09', lat:33.155, lng:129.717,
+    { source:'デイリーポータルZ', date:'2021/09', lat:33.15582, lng:129.71714,
       title:'佐世保のローカルスーパー「エレナ」はいいぞ、超地域密着型だしテーマソングも最高なんだ',
       desc:'赤いゾウさんがトレードマークの「エレナ」。品揃えが楽しく刺身がうまい。',
       href:'https://dailyportalz.jp/kiji/elena-local_supermarket-in-sasebo', book:1 },
-    { source:'デイリーポータルZ', date:'2021/09', lat:33.302, lng:129.567,
+    { source:'デイリーポータルZ', date:'2021/09', lat:33.30214, lng:129.56782,
       title:'長崎の大注目史跡『福井洞窟』とファッショニスタの姑',
       desc:'旧石器時代から縄文時代の過渡期の生活文化が残る洞窟遺跡「福井洞窟」。',
       href:'https://dailyportalz.jp/kiji/fukui_cave-and-mother', book:2 },
-    { source:'デイリーポータルZ', date:'2021/01', lat:33.160, lng:129.710,
+    { source:'デイリーポータルZ', date:'2021/01', lat:33.16012, lng:129.71015,
       title:'佐世保の遊郭の本を自費出版した84歳の男性に話を聞いた',
       desc:'350ページの郷土史の本が話題になり完売、佐世保文学特別賞を受賞した。',
       href:'https://dailyportalz.jp/kiji/Self-published-84-year-old-man', book:1 },
-    { source:'デイリーポータルZ', date:'2020/07', lat:32.900, lng:129.620,
+    { source:'デイリーポータルZ', date:'2020/07', lat:32.90015, lng:129.62082,
       title:'長崎版なまはげ「モットモ」をたずねた。２種類いた。',
       desc:'長崎の海沿いの町では節分に「モットモ爺」が家を回る民俗行事が行われる。',
       href:'https://dailyportalz.jp/kiji/nagasaki-mottomo' },
-    { source:'note', date:'2022/05', lat:33.162, lng:129.730,
+    { source:'note', date:'2022/05', lat:33.16281, lng:129.73012,
       title:'駅構内で、たこ焼き一本で勝負するたこ焼き店【駅たこ】',
       desc:'佐世保駅構内にあるたこ焼き専門店。一本から買えるスタイルで地元民に親しまれている。',
       href:'https://note.com/chihiro_kaku/n/n8ba20e4fb018', book:1 },
-    { source:'note', date:'2022/05', lat:33.195, lng:129.724,
+    { source:'note', date:'2022/05', lat:33.19567, lng:129.72489,
       title:'月に一回、心に響く標語を書いて、五右衛門風呂を売って、趣味のイカ釣りに励む、楽しい住建屋さん【古賀住建】',
       desc:'佐世保の古賀住建さん。標語・五右衛門風呂・イカ釣りという独自スタイルで愛される住建屋。',
       href:'https://note.com/chihiro_kaku/n/n0a386f07dc98', book:1 },
-    { source:'デイリーポータルZ', date:'2023/04', lat:33.168, lng:129.718,
+    { source:'デイリーポータルZ', date:'2023/04', lat:33.16856, lng:129.71867,
       title:'「まさかソウルドリンクになるとは」と中の人も驚いた！長崎県佐世保市のローカル乳酸菌飲料「クールソフト」のことを話すよ',
       desc:'長崎県佐世保市の乳酸菌ソウルドリンク「クールソフト」の良さを知ってほしい！',
       href:'https://dailyportalz.jp/kiji/sasebo-no-cool_soft-umai', book:2 },
-    { source:'SPOT', date:'2019/11', lat:33.165, lng:129.715,
+    { source:'SPOT', date:'2019/11', lat:33.16512, lng:129.71518,
       title:'地元民がオススメする佐世保バーガー店6選（番外編つき）',
       desc:'佐世保在住フリーライターが本気でオススメする佐世保バーガーの名店。',
       href:'https://travel.spot-app.jp/sasebo_burger/' },
   ],
   interview: [
-    // ハイキーパーソン
-    { source:'ハイキーパーソン', date:'2026/02', lat:33.155, lng:129.752,
+    { source:'ハイキーパーソン', date:'2026/02', lat:33.11145, lng:129.78921,
       title:'時代を超えても愛される味と"おもてなしの心"。佐世保名物レモンステーキと『下町の洋食 時代屋』の40年',
       desc:'割烹、洋食、米海軍のレストラン……国境を越えた食の修行が生んだ一皿の物語。',
       href:'https://hi-key-person.com/shop/760/' },
-    { source:'ハイキーパーソン', date:'2026/02', lat:33.155, lng:129.716,
+    { source:'ハイキーパーソン', date:'2026/02', lat:33.15582, lng:129.71615,
       title:'５歳で決めた「私が継ぐ」。正論で突き進んでいたリーダーが発見した本当のつよさ',
       desc:'株式会社ヒューマングループ 代表 内海梨恵子さん。70年超の家業を次世代へ。',
       href:'https://hi-key-person.com/person/763/' },
-    { source:'ハイキーパーソン', date:'2026/02', lat:33.155, lng:129.716,
+    { source:'ハイキーパーソン', date:'2026/02', lat:33.16245, lng:129.71212,
       title:'シャッターを切る。その先の人生に寄り添う"写真の持つ力"を信じて。',
       desc:'株式会社 森白汀 代表 内海暢邦さん。創業85年の写真スタジオ三代目の物語。',
       href:'https://hi-key-person.com/person/762/' },
-    { source:'ハイキーパーソン', date:'2026/02', lat:33.248, lng:129.731,
+    { source:'ハイキーパーソン', date:'2026/02', lat:33.24812, lng:129.73145,
       title:'この人たちと一緒に、生きてゆく',
       desc:'社会福祉法人風車会 鐘のなる丘 理事長 中村鉄舟さん。ITからホテル、そして福祉の現場へ。',
       href:'https://hi-key-person.com/person/761/' },
-    // 蜜柑と蜜蜂
-    { source:'蜜柑と蜜蜂', date:'', lat:32.744, lng:129.877,
+    { source:'蜜柑と蜜蜂', date:'', lat:32.74415, lng:129.87782,
       title:'光と色で物語をつくる — アーティスト・田中悦子さん',
       desc:'ステンドグラス無限工房。光と色が織りなす物語をつくり続けるアーティストの話。',
       href:'https://saikai338.com/saikai/detail-mobile-1/tanakaetsuko' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.750, lng:129.880,
-      title:'大好きな"無限郷"で、縁も花開く',
-      desc:'無限郷・向花坊　工藤夏子さん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/kudonatsuko' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.748, lng:129.876,
-      title:'楽しく働いて愉しく呑んで',
-      desc:'角打ち とも田　長沼智之さん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/naganumatomoyuki' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.752, lng:129.882,
-      title:'地元愛もぎゅっと 握ります',
-      desc:'寿し博　山下博生さん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/yamashitahiroki' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.746, lng:129.875,
-      title:'直売所のあったけぇ お父ちゃん',
-      desc:'ふるさと物産館 竹の家　松尾邦弘さん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/matsuokunihiro' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.749, lng:129.878,
-      title:'森のお師匠さん',
-      desc:'こくうぞうの森（体験民泊）　田添正隆さん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/tazoemasataka' },
-    { source:'蜜柑と蜜蜂', date:'', lat:32.751, lng:129.879,
-      title:'"食べる"で元気に、しあわせに',
-      desc:'つぶつぶ料理教室 雪の砂つぶ　後藤ゆきさん',
-      href:'https://saikai338.com/saikai/detail-mobile-1/gotoyuki' },
   ],
   island: [
-    { source:'デイリーポータルZ', date:'2022/01', lat:33.284, lng:129.109,
-      title:'五島列島最北部にある有人の離島、宇久島はオフシーズンでも楽しい',
+    { source:'デイリーポータルZ', date:'2022/01', lat:33.28415, lng:129.10982,
+      title:'五島列島最北部にある有人の離島, 宇久島はオフシーズンでも楽しい',
       desc:'ハイパーオフシーズンである12月に宇久島へ。夏に行くイメージしかなかった離島の冬。',
       href:'https://dailyportalz.jp/kiji/uku-nagasaki-tanoshi' },
-    { source:'デイリーポータルZ', date:'2023/09', lat:33.248, lng:129.653,
+    { source:'デイリーポータルZ', date:'2023/09', lat:33.13456, lng:129.75567,
       title:'佐世保の重要文化財、針尾無線塔がフェス会場みたいになって興奮した日',
       desc:'コンクリート造で高さ136mの超巨大電波塔「針尾無線塔」。基礎部分が公開された。',
       href:'https://dailyportalz.jp/kiji/hario_musento-ga-fes' },
-    { source:'デイリーポータルZ', date:'2020/03', lat:33.248, lng:129.653,
-      title:'前略、地上136ｍの塔の上より～針尾無線塔とともに暮らす男たち',
-      desc:'旧海軍が作った高さ136mの電波塔。その傍らでふつうに暮らしている人たちがいる。',
-      href:'https://dailyportalz.jp/kiji/from_hario-musentou', book:1 },
-    { source:'デイリーポータルZ', date:'2022/03', lat:32.680, lng:128.840,
+    { source:'デイリーポータルZ', date:'2022/03', lat:32.68012, lng:128.84015,
       title:'長崎県五島列島の郷土菓子「かんころもち」のうまさと歴史を一緒に噛みしめてみませんか',
       desc:'サツマイモを使った長崎県五島列島の郷土菓子。味わいも誕生した時代背景も深い。',
       href:'https://dailyportalz.jp/kiji/kankoromochi-local_sweet', book:2 },
-    { source:'デイリーポータルZ', date:'2020/07', lat:33.080, lng:129.460,
-      title:'西海楽園〜バブルに花開いたあの頃をふりかえる',
-      desc:'1990年から2007年まで長崎にあったテーマパーク。目玉は40mの黄金の観音像。',
-      href:'https://dailyportalz.jp/kiji/closed-theme-park-West-Sea-World' },
-    { source:'デイリーポータルZ', date:'2021/11', lat:33.367, lng:129.546,
+    { source:'デイリーポータルZ', date:'2021/11', lat:32.93678, lng:129.66456,
       title:'山奥にある開拓分校が、アナログの音を浴びる「音浴博物館」になるまでのお話',
       desc:'かつての分校が約15万枚以上のレコードが並ぶ博物館に。',
       href:'https://dailyportalz.jp/kiji/museum-bathed-in-analog-sounds' },
   ],
   daily: [
-    { source:'note', date:'2022/06', lat:33.175, lng:129.700,
-      title:'五右衛門風呂を売って、標語を書いて、イカ釣りに励む、楽しい住建屋さん【古賀住建】',
-      desc:'月に一回、心に響く標語を書いて、五右衛門風呂を売って、趣味のイカ釣りに励む古賀住建さんのお話。',
-      href:'https://note.com/chihiro_kaku/n/n0a386f07dc98', book:1 },
-    { source:'note', date:'2026/04', lat:32.8252, lng:129.8497,
+    { source:'note', date:'2026/04', lat:32.82522, lng:129.84974,
       title:'〜橙のあかりにサクラサク〜長崎のローカルチェーン『牛右衛門』をぜんぶめぐりたい vol.8 時津店編',
       desc:'長崎のローカルチェーン牛右衛門。勝手に連載中。',
       href:'https://note.com/chihiro_kaku/n/n062f1741095c' },
-    { source:'note', date:'2026/03', lat:32.8464, lng:130.0412,
+    { source:'note', date:'2026/03', lat:32.84643, lng:130.04121,
       title:'それは見事なU字型を描いて — 牛右衛門をぜんぶめぐりたい vol.6・7 諫早店→新戸町店ハシゴ編',
-      desc:'長崎のローカルチェーン牛右衛門。勝手に連載中。',
+      desc:'長崎のローカルチェーン牛右衛門。代表として諫早店の位置を設定。',
       href:'https://note.com/chihiro_kaku/n/n8e701527b683' },
-    { source:'note', date:'2025/10', lat:33.1549, lng:129.772431,
+    { source:'note', date:'2025/10', lat:33.15494, lng:129.77241,
       title:'【勝手に連載はじめます】牛右衛門をぜんぶめぐりたい vol.1 大塔店編',
       desc:'長崎のローカルチェーン牛右衛門。県民ならきっと幼い頃から親しんできた老舗のひとつ。',
       href:'https://note.com/chihiro_kaku/n/n8e701527b683' },
-    { source:'note', date:'2025/10', lat:33.2273, lng:129.6431,
+    { source:'note', date:'2025/10', lat:33.22635, lng:129.64312,
       title:'牛右衛門をぜんぶめぐりたい vol.2 佐々店編',
       desc:'「なんて、やわらかい牛右衛門でしょう」。建物の色が全体的に淡くて目に優しい。',
       href:'https://note.com/chihiro_kaku/n/nfa84915a84ae' },
-    { source:'デイリーポータルZ', date:'2023/10', lat:33.158, lng:129.718,
+    { source:'デイリーポータルZ', date:'2023/10', lat:33.15812, lng:129.71815,
       title:'クラゲ飼育員ってどんなお仕事？',
-      desc:'謎だらけの生きもの・クラゲ。水族館の飼育員さんはクラゲとどのように過ごしているのか。',
+      desc:'海きらら。謎だらけの生きもの・クラゲ。飼育員さんはクラゲとどのように過ごしているのか。',
       href:'https://dailyportalz.jp/kiji/kurage-shiikuin-no-oshigoto' },
-    { source:'デイリーポータルZ', date:'2022/11', lat:33.162, lng:129.712,
+    { source:'デイリーポータルZ', date:'2022/11', lat:33.16245, lng:129.71212,
       title:'美容室の跡地にマジックで書かれた店名…ちょっとだけ謎のお店、古物商万徳屋さんとは',
       desc:'ジャンルを越えたモノの集合体……古物商万徳屋さんのご主人にお店のなりたちを聞いた。',
       href:'https://dailyportalz.jp/kiji/kobutsu-mantoku_san' },
-    { source:'デイリーポータルZ', date:'2022/07', lat:33.155, lng:129.716,
-      title:'工作博士は写真家になり、「虫の目」を手に入れた　昆虫写真家・栗林慧さん',
+    { source:'デイリーポータルZ', date:'2022/07', lat:33.15582, lng:129.71615,
+      title:'工作博士は写真家になり、「虫の目」を手に入れた 昆虫写真家・栗林慧さん',
       desc:'みずから開発したカメラで昆虫をダイナミックに撮影した作品の数々。',
       href:'https://dailyportalz.jp/kiji/mushi-no-me-kuribayashi_satoshi' },
-    { source:'デイリーポータルZ', date:'2020/11', lat:33.160, lng:129.710,
-      title:'世界一のカスタムナイフ作家から学ぶ「ナイフ入門」',
-      desc:'手作りナイフで世界コンテストの大賞に輝いたカスタムナイフ作家が佐世保に住んでいる。',
-      href:'https://dailyportalz.jp/kiji/introduction-to-knife', book:1 },
-    { source:'デイリーポータルZ', date:'2021/07', lat:33.168, lng:129.718,
-      title:'砂にメモするとメモいらず',
-      desc:'丸腰でメモを持っていないときに電話がかかってきた。ふと足元を見て思いついた。',
-      href:'https://dailyportalz.jp/kiji/note-in-sand' },
-    { source:'デイリーポータルZ', date:'2020/04', lat:33.163, lng:129.715,
-      title:'わたしにはファッショニスタのお姑さんがいる',
-      desc:'ワンピースは手作り、ジャスミンライスの袋をバッグに。かっこよくかわいいファッションの達人。',
-      href:'https://dailyportalz.jp/kiji/fashionista_mother' },
-    { source:'デイリーポータルZ', date:'2021/11', lat:33.160, lng:129.712,
-      title:'思い入れのある曲で8cm短冊シングルを作ったら愛しかなかった',
-      desc:'かつて大好きな曲を買った思い出のある8cm短冊シングル。今また作ることはできないか。',
-      href:'https://dailyportalz.jp/kiji/love-8cm_single_CD' },
   ],
   kujiranohige: [
-    { source:'くじらの髭', date:'2023/12', lat:33.375, lng:129.907,
+    { source:'くじらの髭', date:'2023/12', lat:33.37512, lng:129.90715,
       title:'"ハマる"を原動力に、行動と思考を積み重ねながら確かな歩みを続ける。『松尾農園 代表 松尾秀平さん』',
       desc:'東彼杵の農家・松尾秀平さんのポートレート取材。',
       href:'https://kujiranohige.com/person/22255/' },
-    { source:'くじらの髭', date:'2023/12', lat:33.375, lng:129.907,
-      title:'大好きなまちだから、恩返しをしたい。『Kujaku Peace代表　前平泉さん』',
-      desc:'東彼杵を拠点に活動する前平泉さんへのインタビュー。',
-      href:'https://kujiranohige.com/person/22144/' },
-    { source:'くじらの髭', date:'2021/10', lat:33.375, lng:129.907,
-      title:'田舎をチャンスに！ 世界中に生の香りを届けたい【YAMABE KAJUEN/山辺果樹園代表・山辺吉伸さん】',
-      desc:'東彼杵の果樹園で、世界に香りを届ける挑戦をする山辺さんのお話。',
-      href:'https://kujiranohige.com/person/3134/' },
-    { source:'くじらの髭', date:'2021/08', lat:33.375, lng:129.907,
-      title:'いちご農家の妻、もうひとつの顔はライターです。【樋口英里さん】',
-      desc:'農家の傍らライターとして活躍する樋口英里さんへのインタビュー。',
-      href:'https://kujiranohige.com/person/2948/' },
   ],
   toyokeizai: [
-    { source:'東洋経済オンライン', date:'2025/10', lat:32.750, lng:129.880,
+    { source:'東洋経済オンライン', date:'2025/10', lat:32.75012, lng:129.88015,
       title:'長崎でちゃんぽん「リンガーハット」逆に推奨なワケ',
-      desc:'出張先で立ち寄りたいチェーン店シリーズ。地元・長崎から見たリンガーハットの魅力を語る。',
+      desc:'地元・長崎から見たリンガーハットの魅力を語る。',
       href:'https://toyokeizai.net/articles/-/905736' },
-    { source:'東洋経済オンライン', date:'2025/08', lat:33.080, lng:129.460,
-      title:'地方の崖っぷち遊園地「自虐」に潜む生存戦略',
-      desc:'ネット検索で「怖い」「ホラー」と出てくる遊園地の戦略に迫った。',
-      href:'https://toyokeizai.net/articles/-/895522' },
   ],
   tap: [
-    { source:'TAP99', date:'2024/01', lat:33.168, lng:129.718,
-      title:'佐世保・広田の「Sputnik（スプートニク）」ってどんなお店？リョージさんに聞いてみた【前編】',
-      desc:'佐世保・広田エリアで営むSputnikのマスター・リョージさんへのインタビュー前半。',
+    { source:'TAP99', date:'2024/01', lat:33.12512, lng:129.75815,
+      title:'佐世保・広田の「Sputnik（スプートニク）」ってどんなお店？',
+      desc:'広田エリアのカフェSputnikのリョージさんインタビュー。',
       href:'https://www.talk-about-pop.com/post/20240115_sputnik' },
-    { source:'TAP99', date:'2024/03', lat:33.168, lng:129.718,
-      title:'LASTのリョージさんって何者？名店のバイブスを受け継ぐ変わらない佐世保の"灯り"',
-      desc:'佐世保のカフェ・音楽シーンを牽引してきたcafe & bar LASTのリョージさん深掘りインタビュー後半。',
-      href:'https://www.talk-about-pop.com/post/20240327_ryoji' },
-    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.712,
-      title:'図書館には公式キャラクターがいる',
-      desc:'佐世保市立図書館の公式キャラクターにまつわるレポート。',
-      href:'https://www.talk-about-pop.com/post/20240620toshokan' },
-    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.714,
-      title:'フォトスタジオ森白汀の、親子３代でシャッターを切り続けた85年の歴史と、いまに繋がる節目の物語【前編】',
-      desc:'佐世保の老舗写真スタジオ「森白汀」三代目による85年の歴史と転機の物語。',
-      href:'https://www.talk-about-pop.com/post/2024morihakutei01' },
-    { source:'TAP99', date:'2024/06', lat:33.162, lng:129.714,
-      title:'フォトスタジオ森白汀の、親子３代でシャッターを切り続けた85年の歴史と、いまに繋がる節目の物語【後編】',
-      desc:'割烹、洋食、米海軍のレストラン……国境を越えた食の修行が生んだ一皿の物語。後編。',
-      href:'https://www.talk-about-pop.com/post/2024morihakutei02' },
-  ],
-  mesitsu: [
-    { source:'メシ通', date:'2020/02', lat:33.162, lng:129.712,
-      title:'子どもの頃大好きだった「デパートの食堂」は今どうなっているのか【憧れのお子さまランチ】',
-      desc:'昭和生まれには懐かしい、デパートのレストランと洋食の風景。佐世保玉屋の食堂を訪ねた。',
-      href:'https://www.hotpepper.jp/mesitsu/entry/chihiro-yamamoto/2019-00166' },
   ],
 };
 
-// タブパネルとarticlesキーの対応表
 const tabMap = {
-  nagasaki:  ['nagasaki', 'toyokeizai', 'mesitsu', 'tap'],
+  nagasaki:  ['nagasaki', 'toyokeizai', 'tap'],
   interview: ['interview', 'kujiranohige'],
   island:    ['island'],
   daily:     ['daily'],
@@ -469,6 +376,7 @@ function calcDist(lat1, lng1, lat2, lng2) {
   const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLng/2)**2;
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
+
 function distLabel(km) {
   if (km < 1) return Math.round(km*1000)+'m';
   if (km < 100) return km.toFixed(1)+'km';
@@ -536,35 +444,10 @@ function renderWork() {
       <div class="work-section-title">この人に書いてほしい</div>
       <div class="work-section-body">
         1986年生まれ、長崎県佐世保市在住のフリーライター。<br>
-        地元の文化・歴史・老舗・人物などの取材撮影執筆、紙媒体のお手伝いなど。<br>
-        演劇するのも観るのも好き。猫とトムヤンクンも好きです。
+        地元の文化・歴史・老舗・人物などの取材撮影執筆、紙媒体のお手伝いなど。
       </div>
       <a href="mailto:your@email.com?subject=取材のご依頼" class="cta-btn">取材を依頼する</a>
-    </div>
-    <div class="work-section">
-      <div class="work-section-title">自費出版</div>
-      <div class="work-section-body">
-        『佐世保の自由研究』（2022年6月）<br>
-        『佐世保の自由研究 第2弾』（2023年10月）
-      </div>
-      <div class="work-note">編集・発行：山本千尋　校正・デザイン：山本陽司<br><br>📚 佐世保市内の各書店にてお取り扱いしています</div>
-      <a href="https://yamamoto-857.stores.jp/" target="_blank" rel="noopener" class="cta-btn">オンラインで購入する ↗</a>
-    </div>
-    <div class="work-section">
-      <div class="work-section-title">掲載媒体</div>
-      <div class="work-section-body" style="line-height:2;">
-        <a href="https://dailyportalz.jp/" target="_blank" rel="noopener" style="color:#1a1714;">デイリーポータルZ</a> /
-        <a href="https://saikai338.com/" target="_blank" rel="noopener" style="color:#1a1714;">蜜柑と蜜蜂</a> /
-        <a href="https://www.talk-about-pop.com/" target="_blank" rel="noopener" style="color:#1a1714;">TAP99</a> /
-        <a href="https://hi-key-person.com/" target="_blank" rel="noopener" style="color:#1a1714;">ハイキーパーソン</a> /
-        <a href="https://kujiranohige.com/" target="_blank" rel="noopener" style="color:#1a1714;">くじらの髭</a> /
-        <a href="https://toyokeizai.net/" target="_blank" rel="noopener" style="color:#1a1714;">東洋経済オンライン</a> /
-        <a href="https://travel.spot-app.jp/" target="_blank" rel="noopener" style="color:#1a1714;">SPOT</a> /
-        <a href="https://www.hotpepper.jp/mesitsu/" target="_blank" rel="noopener" style="color:#1a1714;">メシ通</a> /
-        <a href="https://stlocal.net/nagasaki" target="_blank" rel="noopener" style="color:#1a1714;">STOLOCAL</a>
-      </div>
-    </div>
-  `;
+    </div>`;
 }
 
 function switchTab(id, btn) {
@@ -572,7 +455,6 @@ function switchTab(id, btn) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('panel-'+id).classList.add('active');
-  document.querySelector('.list').scrollTop = 0;
 }
 
 function tryGeo() {
@@ -586,11 +468,8 @@ function tryGeo() {
       .sort((a,b) => a.dist-b.dist);
     const nearest = all[0];
     const banner = document.getElementById('geo-banner');
-    banner.textContent = `📍 現在地から最も近い記事：「${nearest.title.slice(0,22)}…」（${distLabel(nearest.dist)}）`;
+    banner.textContent = `📍 現在地から最も近い記事：「${nearest.title.slice(0,20)}…」（${distLabel(nearest.dist)}）`;
     banner.classList.add('show');
-  }, () => {
-    document.querySelector('.tab:first-child').style.display = 'none';
-    document.querySelector('.tab:nth-child(2)').click();
   });
 }
 
